@@ -1,0 +1,3 @@
+<div id="nr-custom-fit"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/francoguidacci-droid/newros-web@main/custom-fit.css">
+<script src="https://cdn.jsdelivr.net/gh/francoguidacci-droid/newros-web@main/custom-fit.js" defer></script>
