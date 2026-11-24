@@ -1,0 +1,154 @@
+/* TALLES DISPONIBLES */
+
+.nr-sizes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin: 8px 0;
+}
+
+.nr-size {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 30px;
+    height: 28px;
+    padding: 0 6px;
+    border: 1px solid #000;
+    background: #fff;
+    color: #000;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.nr-size-unavailable {
+    background: #f2f2f2;
+    color: #aaa;
+    border-color: #ddd;
+    text-decoration: line-through;
+}
+
+.nr-size-title {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+/* BOTON VISTA RAPIDA */
+
+.js-product-item-image-container-private {
+    position: relative !important;
+}
+
+.nr-quick-button {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #000;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 11px 18px;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity .25s ease;
+    z-index: 25;
+}
+
+.js-product-item-image-container-private:hover
+.nr-quick-button,
+
+.js-product-item-image-container-private:focus-within
+.nr-quick-button {
+    opacity: 1;
+}
+
+/* VENTANA VISTA RAPIDA */
+
+#nr-quick-popup {
+    width: min(850px, 92vw);
+    max-height: 90vh;
+    padding: 25px;
+    border: none;
+    background: #fff;
+    color: #000;
+    overflow: auto;
+    box-sizing: border-box;
+}
+
+#nr-quick-popup::backdrop {
+    background: #0009;
+    backdrop-filter: blur(4px);
+}
+
+.nr-quick-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    align-items: center;
+}
+
+#nr-quick-image {
+    display: block;
+    width: 100%;
+    object-fit: contain;
+}
+
+#nr-quick-name {
+    font-size: 23px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+#nr-quick-price {
+    font-size: 25px;
+    font-weight: 900;
+    margin: 12px 0;
+}
+
+#nr-quick-close {
+    display: block;
+    margin-left: auto;
+    background: #000;
+    color: #fff;
+    border: none;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+#nr-quick-link {
+    display: block;
+    background: #000;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    font-weight: 800;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+@media (max-width: 767px), (hover: none) {
+
+    .nr-quick-button {
+        opacity: 1;
+        top: 10px;
+        left: 10px;
+        transform: none;
+        padding: 7px 9px;
+        font-size: 9px;
+    }
+
+    .nr-quick-layout {
+        grid-template-columns: 1fr;
+    }
+
+    #nr-quick-image {
+        max-height: 330px;
+    }
+}
